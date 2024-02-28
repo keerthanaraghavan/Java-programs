@@ -1,0 +1,48 @@
+package labprogram;
+
+class bonus
+{
+	int id,salary,age;
+	String name,address,gender;
+	double basicsalary;
+	double bonus;
+	
+	void bonusincement(int id,String name,int age,String gender,String address,int salary)
+	{
+		this.id=id;
+		this.name=name;
+		this.age=age;
+		this.address=address;
+		this.salary=salary;
+	}
+	
+	void calculate(String gender,int salary)
+	{
+		if("female"==gender)
+		{
+			basicsalary=salary*0.01;
+			bonus=basicsalary+salary;
+			System.out.println(id+"\t"+name+"\t\t"+age+"\t\t"+gender+"\t\t"+address+"\t"+salary+"\t\t"+basicsalary+"\t\t\t"+bonus);
+		}
+		else
+		{
+			System.out.println(id+"\t"+name+"\t\t\t"+age+"\t\t"+gender+"\t\t"+address+"\t\t"+salary+"\t\t0"+"\t"+"\t\t"+salary);
+		}
+	}
+}
+public class demo 
+{
+	public static void main(String args[])
+	{
+		bonus padma=new bonus();
+		padma.bonusincement(11922041,"shree",25,"female","bengaluru",500000);
+		System.out.println("emp id\t\temp name\t\temp age\t\temp gender\temp place\temp salary\twomens day bonus\ttotal salary");
+		padma.calculate("female",500000);
+		bonus rahul = new bonus();
+		rahul.bonusincement(20720412,"JHON",25,"male","DELHI",60000);
+		rahul.calculate("male",60000);
+		bonus lakshmi=new bonus();
+		lakshmi.bonusincement(36524789,"LAKSHMI",36,"female","Chenni",900000);
+		lakshmi.calculate("female",900000);
+	}
+}
