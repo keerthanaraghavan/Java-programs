@@ -1,0 +1,50 @@
+package querys;
+import java.util.Scanner;
+public class sum
+{
+	public static void main(String args[]) 
+	{
+			boolean isVowel = false;
+
+			System.out.println("This program illustrates switch construct");
+
+			Scanner sc = new Scanner(System.in);
+
+			System.out.println("Enter a valid character...");
+			char ch = sc.next().charAt(0); sc.close();
+
+			switch(ch)
+			{
+
+			case 'A':
+
+			case 'a':
+				isVowel = true; break;
+
+			case 'E':
+			case 'e':
+				isVowel=true; break;
+
+			case 'I':
+			case 'i':
+				isVowel=true; break;
+
+			case 'o':
+			case '0':
+				isVowel=true; break;
+
+			case 'U':
+			case 'u':
+				isVowel=true; break;
+
+			default:isVowel=false;
+			}
+
+		if (isVowel==true)
+			System.out.println("The given character "+ch+" is Vowel.");
+		else
+			System.out.println("The given character "+ch+" is not Vowel.");
+
+			
+	}
+}
