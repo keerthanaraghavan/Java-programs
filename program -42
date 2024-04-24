@@ -1,0 +1,30 @@
+package queries;
+import java.io.FileWriter;
+import java.io.*;
+public class MyfileWriter 
+{
+	public static void main(String args[])
+	throws IOException
+	{
+		try
+	{
+		FileWriter fw=new FileWriter("TestFile.txt");
+		String s="\n all the best for your exams.\n";
+		char ch[]=s.toCharArray();
+		for (int i=0; i <ch.length; i++)
+			fw.write(ch[i]);
+		s="good luck and prepare well..";
+		fw.write(s);
+				fw.close();
+		int i = 0;
+		FileReader fr = new FileReader("TestFule1.txt");
+		while((i = fr.read())!=-1)
+			System.out.println((char)i);
+		fr.close();
+	}
+	catch(FileNotFoundException nfe) 
+	{
+		System.out.println("Invalid File Name\n File does not exists.");
+	}
+	}
+}
